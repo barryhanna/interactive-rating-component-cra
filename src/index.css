@@ -1,13 +1,73 @@
+:root {
+  --clr-very-dark-blue: #131518;
+  --clr-dark-blue: #262e38;
+  --clr-light-grey: rgba(150, 159, 173, 1);
+  --clr-medium-grey: rgba(124, 135, 152, 1);
+  --clr-orange: #fc7614;
+  --clr-white: #fff;
+
+  --border-radius: 1.375rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  text-align: left;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* input[type='radio'] {
+  appearance: none;
+} */
+
+.rating-container {
+  color: var(--clr-white);
+  background: var(--clr-dark-blue);
+  max-width: 377px;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.rating-container p {
+  color: var(--clr-light-grey);
+  font-size: 0.875rem;
+}
+
+.rating-container button {
+  color: var(--clr-white);
+  background: var(--clr-orange);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.rating-box {
+  display: flex;
 }
