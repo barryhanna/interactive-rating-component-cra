@@ -138,3 +138,9 @@ p {
   padding: 5px 12px;
   margin: 2rem auto;
 }
+
+@media (max-width: 375px) {
+  :root {
+    --max-width: 350px;
+  }
+}
